@@ -4,10 +4,11 @@ import { Route, Routes } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
 
 /** User side and Admin side */
-import UserLayout from "./User/layout/index";
-import AdminLayout from "./Admin/layout/index";
+import UserLayout from "./User/layout/Index";
+import AdminLayout from "./Admin/layout/Index";
 
-import Users from "./Admin/pages/Users/index";
+import Users from "./Admin/pages/Index";
+import Auth from "./User/pages/Auth/index";
 
 //Global Style
 //Best for the cusomization of interhtml or any kind of HTML throughout the website
@@ -69,5 +70,5 @@ export default function root() {
     );
   };
 
-  return <div className={classes.root}>{pathsControl()}</div>;
+  return <div>{pathsControl()}</div>;
 }
