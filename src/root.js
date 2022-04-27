@@ -1,11 +1,11 @@
+import jwt_decode from "jwt-decode";
 import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
-import jwt_decode from "jwt-decode";
 
 /** User side and Admin side */
-import AdminLayout from "./Admin/layout/index";
 import UserLayout from "./User/layout/index";
+import AdminLayout from "./Admin/layout/index";
 
 import Users from "./Admin/pages/Users/index";
 
@@ -16,8 +16,8 @@ import Users from "./Admin/pages/Users/index";
 export default function root() {
   const navigate = useNavigate();
   const location = useLocation();
-  const adminToken = localStorage.getItem("adminToken");
   const userToken = localStorage.getItem("userToken");
+  const adminToken = localStorage.getItem("adminToken");
 
   useEffect(() => {
     if (!userToken && !adminToken) {

@@ -1,17 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import { CssBaseline } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
+import { createTheme } from "@mui/material/styles";
 import { NotificationContainer } from "react-notifications";
 import { StyledEngineProvider } from "@mui/material/styles";
-import { createTheme } from "@mui/material/styles";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import { CssBaseline } from "@mui/material";
 
 import Root from "./root";
+import store from "./state/redux-saga";
 import Auth from "./User/pages/Auth/index";
-import store from "./library/redux-saga";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "react-notifications/lib/notifications.css";
